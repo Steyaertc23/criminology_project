@@ -1,0 +1,29 @@
+{% extends 'crimdb/base.html' %}
+
+{% load static %}
+
+{% block metaTags %}
+<link rel="stylesheet" href="{% static 'search.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<form action="{% url 'search' %}" method="post">
+    {% csrf_token %}
+    <input type="text" name="name" placeholder="Full or Partial Name">
+    <input type="submit" name="submit" value="Search">
+</form>
+
+{% if criminals %}
+    <ol>
+    {% for criminal in criminals %}
+        <li>{{ criminal.full_name }}</li>
+        {% for crime in criminal.crime_set.all %}
+            <ul>
+                <li>{{ crime.class_s }} {% if crime.degree == 'FELONY' %}Felony{% else %}Misdomeanor{% endif %}: {{ crime.committed }}</li>
+            </ul>
+        {% endfor %}
+    {% endfor %}
+    </ol>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'crimdb/base.html' %}
+
+
+{% block content %}
+
+<form action="#" method="post">
+    {% csrf_token %}
+    {{form|crispy}}
+    <button type="submit" name="submit" id="submit">Add Criminal</button>
+</form>
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'crimdb/base.html' %}
+
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block metaLinks %}
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+{% endblock %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="content">
+    <div class="pre">
+        {% for message in messages %}
+        <div class="message {{ message.tags }}">
+            {{ message }}
+        </div>
+    {% endfor %}
+    </div>
+    <form action="#" method="post">
+        {% csrf_token %}
+        {{form|crispy}}
+        <p class="r">*Required</p>
+        <button type="submit">Login</button>
+    </form>
+</div>
+{% endblock %}

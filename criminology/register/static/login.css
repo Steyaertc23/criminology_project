@@ -1,0 +1,65 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100dvw;
+    height: 100dvh;
+    overflow: hidden;
+    background-color: black;
+    background-size: 100%;
+}
+
+.content{
+    margin: 20dvh 37.5dvw;
+    width: 25dvw;
+    padding: 5%;
+    border-radius: 5%;
+    background-color: rgba(0,0,0,0.3);
+    overflow-y: hidden;
+}
+
+.pre{
+    color:rgb(255, 251, 0);
+    height: fit-content;
+    text-align: center;
+}
+
+button[type=submit], input[type=text], input[type=password]{
+    background: rgba(0,0,0,0.4);
+    color:aliceblue;
+}
+
+.content label, p{
+    color: cyan;
+}
+.alert{
+    color:yellow;
+}
+
+.content input[type=text], input[type=password]{
+    width: 13dvw;
+    background: rgba(0,0,0,0.6);
+}
+
+#div_id_password #div_id_username{
+    margin-top: 3dvh;
+}
+.r{
+    margin-top: 1dvh;
+    margin-left: 1dvw;
+    font-size: smaller;
+}
+.content div{
+    width: fit-content;
+    margin-left: 1dvw;
+}
+
+button[type=submit]{
+    padding: 0.5dvh;
+    width: 10dvw;
+    margin: 5px 2.5dvw;
+    color: cyan;
+}

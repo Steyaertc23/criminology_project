@@ -1,0 +1,59 @@
+html{
+    height:-webkit-fill-available;
+ }
+ 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+body{
+    background-color: rgb(87, 78, 78);
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+ 
+.content table{
+    border-spacing: 1vw 1vh;
+    width: fit-content;
+}
+ 
+td{
+    width: 20vw;
+    height: 20vh;
+
+}
+ 
+button{
+    width: 100%;
+    height: 100%;
+    padding: 5vh 5vh;
+    font-size: large;
+    border-radius: 5%;
+    color: cyan;
+    background-color: rgba(0,0,0,0.7);
+}
+ 
+button:hover{
+    cursor: pointer;
+}
+
+#first{
+    width: 70vw;
+}
+ 
+.content{
+    width: fit-content;
+    height: fit-content;
+    margin: 15vh 17vw;
+}
+ 
+
+#full{
+    width: 70vw;
+    height: 10vh;
+    box-sizing: border-box;
+}
+

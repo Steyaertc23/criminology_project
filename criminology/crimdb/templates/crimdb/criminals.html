@@ -1,0 +1,37 @@
+{% extends 'crimdb/base.html' %}
+
+{% block content %}
+
+    <h1>All Criminals</h1>
+    <br><br><br>
+    <h3>Felons</h3>
+    <dl>
+        {% for felon in felons %}
+            <dd>{{felon.full_name}} Crimes Committed:
+                <ol>
+                    <li>
+                        {% for crime in felon.crime_set.all() %}
+                            {{felon.crime_set.class_s}} {{felon.crime_set.degree}} {{felon.crime_set.committed}}
+                        {% endfor %}
+                    </li>
+                </ol>
+            </dd>
+        {% endfor %}
+    </dl>
+    <br>
+    <h3>Those with Misdomeanors <strong>ONLY</strong></h3>
+    <dl>
+        {% for misdom in misdoms %}
+            <dd>{{misdom.full_name}} Crimes Committed:
+                <ol>
+                    <li>
+                        {% for crime in misdom.crime_set.all() %}
+                            {{misdom.crime_set.class_s}} {{misdom.crime_set.committed}}
+                        {% endfor %}
+                    </li>
+                </ol>
+            </dd>
+        {% endfor %}
+    </dl>
+
+{% endblock %}
